@@ -6,6 +6,8 @@ and download the audio files of new episodes.
 podcast-downloader can either be run indefinitely checking the defined sources with a given frequency 
 for new content or can be setup as a cron job.
 
+Additionally downloaded episodes may be transfered to different devices through various methods.
+
 ## Setup
 
 WIP
