@@ -1,7 +1,8 @@
 from modules.downloader import Downloader
+import logging
 
 class YoutubePlaylistDownloader(Downloader):
 
 	def download(self, episode):
-		pass
+		logging.debug(episode)
 
