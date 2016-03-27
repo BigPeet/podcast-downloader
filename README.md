@@ -36,6 +36,7 @@ sources I could add.
 
  - Implement a way to scan a Youtube playlist/channel (or single video) for new content and download the audio file.
  - Add ways to transfer the downloaded files to additional devices.
+ - Make the process easier to configure
  - Support for RSS / Atom
  - Improve creation and management of sources (currently sources.list has to be edited manually).
  - ...
