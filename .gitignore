@@ -1,3 +1,7 @@
 *.conf
 *.list
 *.pyc
+
+archive/*
+
+!archive/README.md
