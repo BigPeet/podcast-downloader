@@ -4,8 +4,8 @@
 from abc import ABCMeta, abstractmethod
 
 class EpisodeFilter(object):
-	__metaclass__  = ABCMeta
+    __metaclass__  = ABCMeta
 
-	@abstractmethod
-	def filter_episodes(self, episodes, source):
-		pass
+    @abstractmethod
+    def filter_episodes(self, episodes, source):
+        pass

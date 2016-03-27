@@ -4,8 +4,8 @@
 from abc import ABCMeta, abstractmethod
 
 class Downloader(object):
-	__metaclass__  = ABCMeta
+    __metaclass__  = ABCMeta
 
-	@abstractmethod
-	def download(self, episode):
-		pass
+    @abstractmethod
+    def download(self, episode):
+        pass

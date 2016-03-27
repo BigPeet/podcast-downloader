@@ -4,8 +4,8 @@
 from abc import ABCMeta, abstractmethod
 
 class Scanner(object):
-	__metaclass__  = ABCMeta
+    __metaclass__  = ABCMeta
 
-	@abstractmethod
-	def scan(self, source):
-		pass
+    @abstractmethod
+    def scan(self, source):
+        pass
