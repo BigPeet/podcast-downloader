@@ -3,9 +3,9 @@
 
 from abc import ABCMeta, abstractmethod
 
-class Downloader(object):
+class EpisodeFilter(object):
 	__metaclass__  = ABCMeta
 
 	@abstractmethod
-	def download(self, episode):
+	def filter_episodes(self, episodes, source):
 		pass

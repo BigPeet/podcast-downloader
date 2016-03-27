@@ -3,6 +3,7 @@
 import argparse
 import logging
 from sources import sourcelist_parser
+from modules.module import Module
 
 class PodcastDownloader():
 	def __init__(self, source_list_file):
@@ -12,20 +13,17 @@ class PodcastDownloader():
 	def check_sources(self):
 		for source in self.sources:
 			source_module = self.load_module(source.type)
-
-	def download_episode(self):
-		pass
+			episodes = source_module.scan(source)
+			filtered_episodes = source_module.filter_episodes(episodes, source)
+			source_module.download_episodes(filtered_episodes)
 
 	def load_module(self, source_type):
 		if source_type in self.loaded_modules.keys():
 			return self.loaded_modules[source_type]
 		else:
-			module = self.create_module(source_type)
+			module = Module.create_module(source_type)
 			self.loaded_modules[source_type] = module
 			return module
-
-	def create_module(self, source_type):
-		return None
 
 
 if __name__ == "__main__":
