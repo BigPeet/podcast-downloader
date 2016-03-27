@@ -7,16 +7,16 @@ class SourceType:
         self.id = id
 
     def __eq__(self, other):
-         return (isinstance(other, self.__class__) and self.id == other.id)
+        return (isinstance(other, self.__class__) and self.id == other.id)
 
     def __ne__(self, other):
-         return not self.__eq__(other)
+        return not self.__eq__(other)
 
-     def __str__(self):
-         return self.name
+    def __str__(self):
+        return self.name
 
-     def __hash__(self):
-         return self.id.__hash__()
+    def __hash__(self):
+        return self.id.__hash__()
 
 YOUTUBE_PLAYLIST = SourceType("YOUTUBE_PLAYLIST", 1)
 
