@@ -1,0 +1,10 @@
+# You can manually add sources for podcasts in this file.
+# Lines starting with a # will be treated as comments.
+# Every source should follow this pattern: SOURCE_TYPE  SOURCE_ID   SOURCE_READABLE_NAME
+# To get list of all supported source types, run "python podcast-downloader.py --list-source-types"
+# Whitespaces are used as separators, so avoid names with whitespaces.
+
+# Example:
+# YT_PL  PLzG6vWl2hjWLaJ6fEUKwEK3sUZYMY6JeC
+
+
