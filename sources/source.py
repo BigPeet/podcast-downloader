@@ -26,12 +26,13 @@ TYPES = {"YOUTUBE_PLAYLIST": YOUTUBE_PLAYLIST,
 
 class Source:
 
-    def __init__(self, source_type, id):
+    def __init__(self, source_type, id, name):
         self.type = TYPES[str(source_type)]
         self.id = id
+        self.name = name
         self.last_scanned = None
         self.loaded_episodes_list = None
 
     def __str__(self):
-        return self.type.name + "\t" + str(self.id)
+        return self.type.name + "\t" + str(self.id) + "\t" + self.name
 

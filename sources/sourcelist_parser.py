@@ -21,6 +21,8 @@ def parse_sources(list_file):
 def parse_source(line):
     logging.debug(line)
     tokens = line.split()
+    assert(len(tokens) == 3)
     source_type = tokens[0]
     id = tokens[1]
-    return Source(source_type, id)
+    name = tokens[2]
+    return Source(source_type, id, name)
