@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import argparse
+import logging
 from sources import sourcelist_parser
 
 class PodcastDownloader():
@@ -29,13 +30,22 @@ class PodcastDownloader():
 
 if __name__ == "__main__":
 
-  parser = argparse.ArgumentParser("Text")
+  parser = argparse.ArgumentParser()
 
   parser.add_argument("--loop", default=None, help="The frequency the sources will be checked with. \
   	If no value is specified, the sources will be checked only once.")
   parser.add_argument("--sources", default="conf/sources.list", help="path to the list of podcast sources")
+  parser.add_argument("--loglevel", default="DEBUG", help="the logging level")
+  parser.add_argument("--logfile", default=None, help="The logfile the log output will be written into. \
+   If no value is specified, the output will be written into stdout.")
 
   args = parser.parse_args()
+
+  numeric_level = getattr(logging, args.loglevel.upper(), None)
+  if not isinstance(numeric_level, int):
+  	raise ValueError("Invalid log level: %s" % loglevel)
+  logging.basicConfig(level=numeric_level, filename=args.logfile, filemode="w", 
+  	format="%(levelname)s:%(asctime)s - %(funcName)s: %(message)s")
 
   downloader = PodcastDownloader(args.sources)
   downloader.check_sources()
